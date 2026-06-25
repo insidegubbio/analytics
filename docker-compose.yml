@@ -1,0 +1,9 @@
+services:
+  umami:
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      APP_SECRET: ${APP_SECRET}
+    ports:
+      - "3000:3000"
+    restart: always
